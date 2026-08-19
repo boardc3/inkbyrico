@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --edge: 1px solid rgba(239, 235, 228, 0.09);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ink text-bone font-sans font-light antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #c2ad8e;
+    color: #080807;
+  }
+
+  /* Slim, unobtrusive scrollbar that matches the canvas */
+  ::-webkit-scrollbar { width: 9px; height: 9px; }
+  ::-webkit-scrollbar-track { background: #080807; }
+  ::-webkit-scrollbar-thumb { background: #262622; }
+  ::-webkit-scrollbar-thumb:hover { background: #3a3a34; }
+}
+
+@layer components {
+  /* Small tracked-out label used above every section heading */
+  .eyebrow {
+    @apply font-sans text-[10px] uppercase tracking-mega text-bone-mute;
+  }
+
+  .hairline {
+    border-top: var(--edge);
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-[1600px] px-6 sm:px-10 lg:px-16;
+  }
+
+  /* Text link with an underline that wipes in from the left */
+  .link-wipe {
+    @apply relative inline-block;
+  }
+  .link-wipe::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-wipe:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 border border-bone/20 px-8 py-4
+           font-sans text-[11px] uppercase tracking-wide2 text-bone
+           transition-colors duration-500 hover:border-bone/60 hover:bg-bone hover:text-ink;
+  }
+
+  .btn-solid {
+    @apply inline-flex items-center justify-center gap-3 bg-bone px-8 py-4
+           font-sans text-[11px] uppercase tracking-wide2 text-ink
+           transition-opacity duration-500 hover:opacity-80;
+  }
+
+  .field {
+    @apply w-full border-0 border-b border-bone/15 bg-transparent px-0 py-4
+           font-sans text-[15px] text-bone placeholder-bone-mute/70 outline-none
+           transition-colors duration-300 focus:border-bone/60;
+  }
+}
+
+/* Fine film grain over the whole page — sells the "aged pencil" feel */
+.grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 260 260' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .grain-overlay { animation: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

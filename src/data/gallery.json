@@ -1,0 +1,681 @@
+{
+  "work": [
+    {
+      "id": "w01",
+      "thumb": "/gallery/w01-t.webp",
+      "full": "/gallery/w01.webp",
+      "alt": "All-seeing eye held in an open hand, fine line",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w02",
+      "thumb": "/gallery/w02-t.webp",
+      "full": "/gallery/w02.webp",
+      "alt": "Delicate ocean wave wrapping the forearm",
+      "tags": [
+        "fineline",
+        "ocean"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w03",
+      "thumb": "/gallery/w03-t.webp",
+      "full": "/gallery/w03.webp",
+      "alt": "Single needle snake running down the back of the hand",
+      "tags": [
+        "nature",
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w04",
+      "thumb": "/gallery/w04-t.webp",
+      "full": "/gallery/w04.webp",
+      "alt": "Tiny bird tattooed on the inner arm",
+      "tags": [
+        "fineline",
+        "nature"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w05",
+      "thumb": "/gallery/w05-t.webp",
+      "full": "/gallery/w05.webp",
+      "alt": "Miniature Diet Coke can on the wrist",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w07",
+      "thumb": "/gallery/w07-t.webp",
+      "full": "/gallery/w07.webp",
+      "alt": "Skull and heart study on the forearm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w08",
+      "thumb": "/gallery/w08-t.webp",
+      "full": "/gallery/w08.webp",
+      "alt": "Michelangelo's Creation of Adam, single needle",
+      "tags": [
+        "fineline",
+        "portraits"
+      ],
+      "ratio": 0.8002
+    },
+    {
+      "id": "w09",
+      "thumb": "/gallery/w09-t.webp",
+      "full": "/gallery/w09.webp",
+      "alt": "Fine line finger tattoos across both hands",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w10",
+      "thumb": "/gallery/w10-t.webp",
+      "full": "/gallery/w10.webp",
+      "alt": "Finger gems \u2014 hairline ornamental work",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w11",
+      "thumb": "/gallery/w11-t.webp",
+      "full": "/gallery/w11.webp",
+      "alt": "Tiny dancing skeleton on the forearm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8002
+    },
+    {
+      "id": "w12",
+      "thumb": "/gallery/w12-t.webp",
+      "full": "/gallery/w12.webp",
+      "alt": "Golden retriever portrait on the upper arm",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w13",
+      "thumb": "/gallery/w13-t.webp",
+      "full": "/gallery/w13.webp",
+      "alt": "Miniature figures walking across the arm",
+      "tags": [
+        "fineline",
+        "ocean"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w15",
+      "thumb": "/gallery/w15-t.webp",
+      "full": "/gallery/w15.webp",
+      "alt": "Cowboy and cattle scene, single needle",
+      "tags": [
+        "western"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w16",
+      "thumb": "/gallery/w16-t.webp",
+      "full": "/gallery/w16.webp",
+      "alt": "Butterfly on the forearm, hairline detail",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8623
+    },
+    {
+      "id": "w17",
+      "thumb": "/gallery/w17-t.webp",
+      "full": "/gallery/w17.webp",
+      "alt": "Scattered stars and a compass point on the hand",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.82
+    },
+    {
+      "id": "w19",
+      "thumb": "/gallery/w19-t.webp",
+      "full": "/gallery/w19.webp",
+      "alt": "Tropical shoreline scene tattooed on the arm",
+      "tags": [
+        "ocean",
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w20",
+      "thumb": "/gallery/w20-t.webp",
+      "full": "/gallery/w20.webp",
+      "alt": "Crystal ball with 'invent yourself' script",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w21",
+      "thumb": "/gallery/w21-t.webp",
+      "full": "/gallery/w21.webp",
+      "alt": "Snake coiled through a rose",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8009
+    },
+    {
+      "id": "w22",
+      "thumb": "/gallery/w22-t.webp",
+      "full": "/gallery/w22.webp",
+      "alt": "Ornamental gems across the fingers",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w23",
+      "thumb": "/gallery/w23-t.webp",
+      "full": "/gallery/w23.webp",
+      "alt": "Geometric eye with botanical framing",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w24",
+      "thumb": "/gallery/w24-t.webp",
+      "full": "/gallery/w24.webp",
+      "alt": "'lover' script on the ring finger",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w25",
+      "thumb": "/gallery/w25-t.webp",
+      "full": "/gallery/w25.webp",
+      "alt": "Mini glass Coke bottle on the forearm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w26",
+      "thumb": "/gallery/w26-t.webp",
+      "full": "/gallery/w26.webp",
+      "alt": "Mickey Mouse with a balloon, black and grey",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.804
+    },
+    {
+      "id": "w27",
+      "thumb": "/gallery/w27-t.webp",
+      "full": "/gallery/w27.webp",
+      "alt": "Shepherd portrait resting on the arm",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w29",
+      "thumb": "/gallery/w29-t.webp",
+      "full": "/gallery/w29.webp",
+      "alt": "Fine line bracelet around the wrist",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w30",
+      "thumb": "/gallery/w30-t.webp",
+      "full": "/gallery/w30.webp",
+      "alt": "Bone and bloom on the finger",
+      "tags": [
+        "nature",
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w31",
+      "thumb": "/gallery/w31-t.webp",
+      "full": "/gallery/w31.webp",
+      "alt": "Two tiny palm trees on the inner arm",
+      "tags": [
+        "ocean",
+        "fineline"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w33",
+      "thumb": "/gallery/w33-t.webp",
+      "full": "/gallery/w33.webp",
+      "alt": "Cherub on the finger beside a chain bracelet",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w34",
+      "thumb": "/gallery/w34-t.webp",
+      "full": "/gallery/w34.webp",
+      "alt": "Character from a childhood book, line drawn",
+      "tags": [
+        "portraits",
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w35",
+      "thumb": "/gallery/w35-t.webp",
+      "full": "/gallery/w35.webp",
+      "alt": "Hummingbird mid-flight on the forearm",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w36",
+      "thumb": "/gallery/w36-t.webp",
+      "full": "/gallery/w36.webp",
+      "alt": "French bulldog portrait on the arm",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w39",
+      "thumb": "/gallery/w39-t.webp",
+      "full": "/gallery/w39.webp",
+      "alt": "Lion portrait with coordinates above it",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w40",
+      "thumb": "/gallery/w40-t.webp",
+      "full": "/gallery/w40.webp",
+      "alt": "Goldendoodle portrait on the leg",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 1.0007
+    },
+    {
+      "id": "w41",
+      "thumb": "/gallery/w41-t.webp",
+      "full": "/gallery/w41.webp",
+      "alt": "Bull skull on the finger beneath 'CREATE'",
+      "tags": [
+        "western",
+        "nature"
+      ],
+      "ratio": 0.9051
+    },
+    {
+      "id": "w42",
+      "thumb": "/gallery/w42-t.webp",
+      "full": "/gallery/w42.webp",
+      "alt": "Freehand leaf wrapping the forearm",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w43",
+      "thumb": "/gallery/w43-t.webp",
+      "full": "/gallery/w43.webp",
+      "alt": "Single needle tiger on the inner wrist",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w44",
+      "thumb": "/gallery/w44-t.webp",
+      "full": "/gallery/w44.webp",
+      "alt": "Hand ornaments and 'ART' across the fingers",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w45",
+      "thumb": "/gallery/w45-t.webp",
+      "full": "/gallery/w45.webp",
+      "alt": "Lion and pocket watch, upper arm",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.7524
+    },
+    {
+      "id": "w47",
+      "thumb": "/gallery/w47-t.webp",
+      "full": "/gallery/w47.webp",
+      "alt": "Small portrait of two siblings on the arm",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w48",
+      "thumb": "/gallery/w48-t.webp",
+      "full": "/gallery/w48.webp",
+      "alt": "Healed fine line work across the shoulder",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.9549
+    },
+    {
+      "id": "w49",
+      "thumb": "/gallery/w49-t.webp",
+      "full": "/gallery/w49.webp",
+      "alt": "Cat portrait on the upper arm",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w50",
+      "thumb": "/gallery/w50-t.webp",
+      "full": "/gallery/w50.webp",
+      "alt": "Freehand floral running down the shoulder",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w51",
+      "thumb": "/gallery/w51-t.webp",
+      "full": "/gallery/w51.webp",
+      "alt": "Frida Kahlo portrait, single needle",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w52",
+      "thumb": "/gallery/w52-t.webp",
+      "full": "/gallery/w52.webp",
+      "alt": "Racehorse and jockey at full gallop",
+      "tags": [
+        "western"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w53",
+      "thumb": "/gallery/w53-t.webp",
+      "full": "/gallery/w53.webp",
+      "alt": "Butterflies floating along the forearm",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w54",
+      "thumb": "/gallery/w54-t.webp",
+      "full": "/gallery/w54.webp",
+      "alt": "Architectural stamp on the upper arm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8471
+    },
+    {
+      "id": "w55",
+      "thumb": "/gallery/w55-t.webp",
+      "full": "/gallery/w55.webp",
+      "alt": "Cherubs drifting down the forearm",
+      "tags": [
+        "fineline",
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w56",
+      "thumb": "/gallery/w56-t.webp",
+      "full": "/gallery/w56.webp",
+      "alt": "Dog portrait with a golfing twist",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8978
+    },
+    {
+      "id": "w57",
+      "thumb": "/gallery/w57-t.webp",
+      "full": "/gallery/w57.webp",
+      "alt": "Boston terrier portrait on the forearm",
+      "tags": [
+        "portraits"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w58",
+      "thumb": "/gallery/w58-t.webp",
+      "full": "/gallery/w58.webp",
+      "alt": "Pair of cherries on the wrist",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.9639
+    },
+    {
+      "id": "w59",
+      "thumb": "/gallery/w59-t.webp",
+      "full": "/gallery/w59.webp",
+      "alt": "Tiny boat on the upper arm",
+      "tags": [
+        "ocean",
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w60",
+      "thumb": "/gallery/w60-t.webp",
+      "full": "/gallery/w60.webp",
+      "alt": "Outlaw cowgirl and horseshoe on the shoulder",
+      "tags": [
+        "western"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w61",
+      "thumb": "/gallery/w61-t.webp",
+      "full": "/gallery/w61.webp",
+      "alt": "Two swallows in flight on the arm",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w62",
+      "thumb": "/gallery/w62-t.webp",
+      "full": "/gallery/w62.webp",
+      "alt": "Wolf portrait with compass, thigh piece",
+      "tags": [
+        "nature",
+        "portraits"
+      ],
+      "ratio": 0.8521
+    },
+    {
+      "id": "w63",
+      "thumb": "/gallery/w63-t.webp",
+      "full": "/gallery/w63.webp",
+      "alt": "Rose stem placed along the neck",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w64",
+      "thumb": "/gallery/w64-t.webp",
+      "full": "/gallery/w64.webp",
+      "alt": "Fish, balloon and dog on the forearm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w65",
+      "thumb": "/gallery/w65-t.webp",
+      "full": "/gallery/w65.webp",
+      "alt": "Winged revolver and pocket watch sleeve",
+      "tags": [
+        "western"
+      ],
+      "ratio": 0.8961
+    },
+    {
+      "id": "w66",
+      "thumb": "/gallery/w66-t.webp",
+      "full": "/gallery/w66.webp",
+      "alt": "Poppy stamp framed on the upper arm",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w67",
+      "thumb": "/gallery/w67-t.webp",
+      "full": "/gallery/w67.webp",
+      "alt": "Paper aeroplane crossing the arm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8
+    },
+    {
+      "id": "w68",
+      "thumb": "/gallery/w68-t.webp",
+      "full": "/gallery/w68.webp",
+      "alt": "Fine line script and charms down the forearm",
+      "tags": [
+        "fineline"
+      ],
+      "ratio": 0.8851
+    },
+    {
+      "id": "w69",
+      "thumb": "/gallery/w69-t.webp",
+      "full": "/gallery/w69.webp",
+      "alt": "A rare hit of colour \u2014 orange on the ribs",
+      "tags": [
+        "nature"
+      ],
+      "ratio": 1.0
+    },
+    {
+      "id": "w70",
+      "thumb": "/gallery/w70-t.webp",
+      "full": "/gallery/w70.webp",
+      "alt": "Portrait and botanical leg piece",
+      "tags": [
+        "portraits",
+        "nature"
+      ],
+      "ratio": 0.8526
+    },
+    {
+      "id": "w71",
+      "thumb": "/gallery/w71-t.webp",
+      "full": "/gallery/w71.webp",
+      "alt": "Revolver rendered across the torso",
+      "tags": [
+        "western"
+      ],
+      "ratio": 0.8
+    }
+  ],
+  "studio": {
+    "rico-working": "/studio/rico-working.webp",
+    "rico-session": "/studio/rico-session.webp",
+    "rico-portrait": "/studio/rico-portrait.webp",
+    "rico-hat": "/studio/rico-hat.webp",
+    "rico-skim": "/studio/rico-skim.webp",
+    "rico-beach": "/studio/rico-beach.webp",
+    "rico-pool": "/studio/rico-pool.webp",
+    "rico-travel": "/studio/rico-travel.webp"
+  },
+  "pairs": [
+    {
+      "id": "golden-retriever",
+      "before": "/pairs/golden-retriever-a.webp",
+      "after": "/pairs/golden-retriever-b.webp",
+      "beforeLabel": "The photograph the client brought in",
+      "afterLabel": "The finished portrait, healed"
+    },
+    {
+      "id": "bullmastiff",
+      "before": "/pairs/bullmastiff-a.webp",
+      "after": "/pairs/bullmastiff-b.webp",
+      "beforeLabel": "The dog, from the client's camera roll",
+      "afterLabel": "Rendered in single needle black and grey"
+    },
+    {
+      "id": "coke-bottle",
+      "before": "/pairs/coke-bottle-a.webp",
+      "after": "/pairs/coke-bottle-b.webp",
+      "beforeLabel": "Black and grey, as it is shot",
+      "afterLabel": "The same piece, in colour"
+    }
+  ]
+}
