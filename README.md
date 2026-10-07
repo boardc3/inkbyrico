@@ -79,3 +79,12 @@ serverless function. The markup does not need to change.
 - [ ] Add `public/og.jpg` (1200×630) for link previews.
 - [ ] Add `public/favicon.ico`.
 - [ ] Point `<link rel="canonical">` in `index.html` at the real domain.
+
+## Booking form delivery (Web3Forms)
+
+The booking form POSTs to Web3Forms when `VITE_WEB3FORMS_KEY` is set (Vercel →
+Settings → Environment Variables, then redeploy). The access key is public by
+design and is tied to the inbox it was created for (inkbyrico@gmail.com). Without
+the variable the form falls back to `mailto:`.
+
+- [ ] Get an access key for inkbyrico@gmail.com at web3forms.com, set `VITE_WEB3FORMS_KEY`, redeploy, send a test enquiry.

@@ -7,17 +7,46 @@ import data from '../data/gallery.json'
 const PLACEMENTS = ['Forearm', 'Upper arm', 'Hand / fingers', 'Ribs', 'Leg', 'Back', 'Neck', 'Somewhere else']
 const SIZES = ['Under 1 in', '1–2 in', '2–4 in', '4 in +', 'Not sure yet']
 
-/**
- * No backend required: the form composes a well-structured email and hands it
- * to the visitor's mail client. Swap `onSubmit` for a Formspree / Resend
- * endpoint later without touching the markup.
- */
-export default function Booking() {
-  const [sent, setSent] = useState(false)
+// Web3Forms access key (public by design). Set VITE_WEB3FORMS_KEY in
+// Vercel → Settings → Environment Variables. Web3Forms emails each submission to
+// the address the key was created for (inkbyrico@gmail.com).
+// If unset, the form falls back to the visitor's mail client (mailto).
+const ENDPOINT = 'https://api.web3forms.com/submit'
+const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY
+const FORM_ID = ACCESS_KEY
 
-  const onSubmit = (e) => {
+export default function Booking() {
+  // idle | sending | sent | mailto | error
+  const [status, setStatus] = useState('idle')
+
+  const onSubmit = async (e) => {
     e.preventDefault()
-    const f = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const f = new FormData(form)
+
+    if (FORM_ID) {
+      // Honeypot: bots fill the hidden field, humans don't.
+      if (f.get('botcheck')) return
+      f.set('access_key', ACCESS_KEY)
+      f.set('from_name', 'inkbyrico.com')
+      f.set('replyto', f.get('email'))
+      setStatus('sending')
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: f,
+        })
+        const out = await res.json().catch(() => ({}))
+        if (!res.ok || out.success === false) throw new Error(out.message || String(res.status))
+        form.reset()
+        setStatus('sent')
+      } catch {
+        setStatus('error')
+      }
+      return
+    }
+
     const body = [
       `Name: ${f.get('name')}`,
       `Email: ${f.get('email')}`,
@@ -37,7 +66,7 @@ export default function Booking() {
       `mailto:${artist.email}` +
       `?subject=${encodeURIComponent(`Tattoo enquiry — ${f.get('name')}`)}` +
       `&body=${encodeURIComponent(body)}`
-    setSent(true)
+    setStatus('mailto')
   }
 
   return (
@@ -70,7 +99,21 @@ export default function Booking() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <form onSubmit={onSubmit} className="mt-12 space-y-8">
+              <form
+                method="POST"
+                action={FORM_ID ? ENDPOINT : undefined}
+                onSubmit={onSubmit}
+                className="mt-12 space-y-8"
+              >
+                <input type="hidden" name="subject" value="New tattoo enquiry — inkbyrico.com" />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                   <label className="block">
                     <span className="eyebrow">Name</span>
@@ -124,20 +167,32 @@ export default function Booking() {
                 </label>
 
                 <div className="flex flex-wrap items-center gap-6 pt-2">
-                  <button type="submit" className="btn-solid">
-                    Send enquiry <ArrowUpRight size={14} strokeWidth={1.5} />
+                  <button type="submit" disabled={status === 'sending'} className="btn-solid disabled:opacity-60">
+                    {status === 'sending' ? 'Sending…' : 'Send enquiry'} <ArrowUpRight size={14} strokeWidth={1.5} />
                   </button>
                   <a href={`mailto:${artist.email}`} className="link-wipe text-[13px] text-bone-dim">
                     or email {artist.email}
                   </a>
                 </div>
 
-                {sent && (
-                  <p className="text-[13px] text-sand">
-                    Your mail app should be opening with the message ready. If nothing happened,
-                    email {artist.email} directly.
-                  </p>
-                )}
+                <div role="status" aria-live="polite">
+                  {status === 'sent' && (
+                    <p className="text-[13px] text-sand">
+                      Thank you — your enquiry is with Rico. Expect a reply by email within a few days.
+                    </p>
+                  )}
+                  {status === 'mailto' && (
+                    <p className="text-[13px] text-sand">
+                      Your mail app should be opening with the message ready. If nothing happened,
+                      email {artist.email} directly.
+                    </p>
+                  )}
+                  {status === 'error' && (
+                    <p className="text-[13px] text-sand">
+                      Something went wrong sending that. Please try again, or email {artist.email} directly.
+                    </p>
+                  )}
+                </div>
               </form>
             </Reveal>
           </div>
