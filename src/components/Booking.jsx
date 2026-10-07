@@ -7,13 +7,11 @@ import data from '../data/gallery.json'
 const PLACEMENTS = ['Forearm', 'Upper arm', 'Hand / fingers', 'Ribs', 'Leg', 'Back', 'Neck', 'Somewhere else']
 const SIZES = ['Under 1 in', '1–2 in', '2–4 in', '4 in +', 'Not sure yet']
 
-// Web3Forms access key (public by design). Set VITE_WEB3FORMS_KEY in
-// Vercel → Settings → Environment Variables. Web3Forms emails each submission to
-// the address the key was created for (inkbyrico@gmail.com).
-// If unset, the form falls back to the visitor's mail client (mailto).
-const ENDPOINT = 'https://api.web3forms.com/submit'
-const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY
-const FORM_ID = ACCESS_KEY
+// FormSubmit.co — no account, no API key. Submissions are emailed straight to
+// artist.email. The very first submission triggers a one-time "Activate form"
+// email to that inbox; once clicked, every enquiry is delivered directly.
+const ENDPOINT = `https://formsubmit.co/ajax/${artist.email}`
+const FORM_ID = ENDPOINT
 
 export default function Booking() {
   // idle | sending | sent | mailto | error
@@ -26,19 +24,27 @@ export default function Booking() {
 
     if (FORM_ID) {
       // Honeypot: bots fill the hidden field, humans don't.
-      if (f.get('botcheck')) return
-      f.set('access_key', ACCESS_KEY)
-      f.set('from_name', 'inkbyrico.com')
-      f.set('replyto', f.get('email'))
+      if (f.get('_honey')) return
       setStatus('sending')
       try {
         const res = await fetch(ENDPOINT, {
           method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: f,
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            Name: f.get('name'),
+            Email: f.get('email'),
+            Instagram: f.get('ig') || '—',
+            Placement: f.get('placement'),
+            'Approx. size': f.get('size'),
+            'Preferred timing': f.get('timing') || '—',
+            'The idea': f.get('idea'),
+            _subject: `Tattoo enquiry — ${f.get('name')}`,
+            _replyto: f.get('email'),
+            _template: 'table',
+          }),
         })
         const out = await res.json().catch(() => ({}))
-        if (!res.ok || out.success === false) throw new Error(out.message || String(res.status))
+        if (!res.ok || String(out.success) !== 'true') throw new Error(out.message || String(res.status))
         form.reset()
         setStatus('sent')
       } catch {
@@ -101,14 +107,13 @@ export default function Booking() {
             <Reveal delay={0.15}>
               <form
                 method="POST"
-                action={FORM_ID ? ENDPOINT : undefined}
+                action={`https://formsubmit.co/${artist.email}`}
                 onSubmit={onSubmit}
                 className="mt-12 space-y-8"
               >
-                <input type="hidden" name="subject" value="New tattoo enquiry — inkbyrico.com" />
                 <input
-                  type="checkbox"
-                  name="botcheck"
+                  type="text"
+                  name="_honey"
                   tabIndex={-1}
                   autoComplete="off"
                   aria-hidden="true"

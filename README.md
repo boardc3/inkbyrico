@@ -80,11 +80,15 @@ serverless function. The markup does not need to change.
 - [ ] Add `public/favicon.ico`.
 - [ ] Point `<link rel="canonical">` in `index.html` at the real domain.
 
-## Booking form delivery (Web3Forms)
+## Booking form delivery (FormSubmit)
 
-The booking form POSTs to Web3Forms when `VITE_WEB3FORMS_KEY` is set (Vercel →
-Settings → Environment Variables, then redeploy). The access key is public by
-design and is tied to the inbox it was created for (inkbyrico@gmail.com). Without
-the variable the form falls back to `mailto:`.
+The booking form posts to [FormSubmit](https://formsubmit.co), a free email form
+service with no account or API key. Enquiries are emailed straight to
+inkbyrico@gmail.com (`artist.email` in `src/data/site.js`), with the customer's
+address as Reply-To.
 
-- [ ] Get an access key for inkbyrico@gmail.com at web3forms.com, set `VITE_WEB3FORMS_KEY`, redeploy, send a test enquiry.
+The first submission ever sent triggers a one-time "Activate form" email to
+inkbyrico@gmail.com. Until that link is clicked, nothing is delivered.
+
+- [ ] Send one test enquiry from the live site, and have Rico click "Activate form" in the email FormSubmit sends him.
+- [ ] Send a second test and confirm it arrives.
