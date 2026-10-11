@@ -35,10 +35,13 @@ export default function Booking() {
       '— Sent from inkbyrico.com',
     ].join('\n')
 
-    window.location.href =
+    window.open(
       `mailto:${artist.email}` +
       `?subject=${encodeURIComponent(`Tattoo enquiry — ${f.get('name')}`)}` +
-      `&body=${encodeURIComponent(body)}`
+      `&body=${encodeURIComponent(body)}`,
+      '_blank',
+      'noopener,noreferrer',
+    )
     setStatus('mailto')
   }
 
@@ -140,7 +143,7 @@ export default function Booking() {
                   <button type="submit" className="btn-solid">
                     Send enquiry <ArrowUpRight size={14} strokeWidth={1.5} />
                   </button>
-                  <a href={`mailto:${artist.email}`} className="link-wipe text-[13px] text-bone-dim">
+                  <a href={`mailto:${artist.email}`} target="_blank" rel="noopener noreferrer" className="link-wipe text-[13px] text-bone-dim">
                     or email {artist.email}
                   </a>
                 </div>

@@ -22,7 +22,7 @@ export default function Location() {
               <div>
                 <dt className="eyebrow">Booking</dt>
                 <dd className="mt-2 text-[15px] text-bone-dim">
-                  <a href={`mailto:${artist.email}`} className="link-wipe">{artist.email}</a>
+                  <a href={`mailto:${artist.email}`} target="_blank" rel="noopener noreferrer" className="link-wipe">{artist.email}</a>
                   <span className="mx-3 text-bone-mute">/</span>
                   <a href={artist.instagram} target="_blank" rel="noreferrer noopener" className="link-wipe">
                     {artist.instagramHandle}

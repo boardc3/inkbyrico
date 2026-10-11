@@ -70,7 +70,7 @@ export default function Nav() {
                 {l.label}
               </Link>
             ))}
-            <a href={`mailto:${artist.email}`} className="btn !px-6 !py-3">
+            <a href={`mailto:${artist.email}`} target="_blank" rel="noopener noreferrer" className="btn !px-6 !py-3">
               Book
             </a>
           </nav>
@@ -110,7 +110,7 @@ export default function Nav() {
             </Link>
           ))}
           <a
-            href={`mailto:${artist.email}`}
+            href={`mailto:${artist.email}`} target="_blank" rel="noopener noreferrer"
             className="mt-10 font-sans text-[11px] uppercase tracking-wide2 text-bone-mute"
           >
             {artist.email}

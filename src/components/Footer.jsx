@@ -32,7 +32,7 @@ export default function Footer() {
               <p className="eyebrow">Contact</p>
               <ul className="mt-5 space-y-3 text-[13px] text-bone-dim">
                 <li>
-                  <a href={`mailto:${artist.email}`} className="link-wipe inline-flex items-center gap-2">
+                  <a href={`mailto:${artist.email}`} target="_blank" rel="noopener noreferrer" className="link-wipe inline-flex items-center gap-2">
                     <Mail size={13} strokeWidth={1.3} /> Email
                   </a>
                 </li>

@@ -113,7 +113,7 @@ export default function Aftercare() {
 
         <Reveal delay={0.1}>
           <div className="mt-16 flex flex-wrap items-center gap-5">
-            <a href={`mailto:${artist.email}`} className="btn-solid">Message Rico</a>
+            <a href={`mailto:${artist.email}`} target="_blank" rel="noopener noreferrer" className="btn-solid">Message Rico</a>
             <Link to="/" className="btn">Back to the work</Link>
           </div>
         </Reveal>
