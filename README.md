@@ -80,15 +80,11 @@ serverless function. The markup does not need to change.
 - [ ] Add `public/favicon.ico`.
 - [ ] Point `<link rel="canonical">` in `index.html` at the real domain.
 
-## Booking form delivery (FormSubmit)
+## Booking form delivery
 
-The booking form posts to [FormSubmit](https://formsubmit.co), a free email form
-service with no account or API key. Enquiries are emailed straight to
-inkbyrico@gmail.com (`artist.email` in `src/data/site.js`), with the customer's
-address as Reply-To.
+The booking form and every contact link use `mailto:` to inkbyrico@gmail.com
+(`artist.email` in `src/data/site.js`). The form opens the visitor's mail app with
+a pre-filled enquiry. There is no third-party service.
 
-The first submission ever sent triggers a one-time "Activate form" email to
-inkbyrico@gmail.com. Until that link is clicked, nothing is delivered.
-
-- [ ] Send one test enquiry from the live site, and have Rico click "Activate form" in the email FormSubmit sends him.
-- [ ] Send a second test and confirm it arrives.
+Known limitation: a desktop visitor with no mail app configured gets nothing when
+they press Send. The on-page note tells them to email directly.

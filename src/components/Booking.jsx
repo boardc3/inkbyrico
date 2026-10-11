@@ -7,51 +7,18 @@ import data from '../data/gallery.json'
 const PLACEMENTS = ['Forearm', 'Upper arm', 'Hand / fingers', 'Ribs', 'Leg', 'Back', 'Neck', 'Somewhere else']
 const SIZES = ['Under 1 in', '1–2 in', '2–4 in', '4 in +', 'Not sure yet']
 
-// FormSubmit.co — no account, no API key. Submissions are emailed straight to
-// artist.email. The very first submission triggers a one-time "Activate form"
-// email to that inbox; once clicked, every enquiry is delivered directly.
-const ENDPOINT = `https://formsubmit.co/ajax/${artist.email}`
-const FORM_ID = ENDPOINT
-
+/**
+ * No backend: the form composes a well-structured email to artist.email
+ * (inkbyrico@gmail.com) and opens it in the visitor's mail client.
+ */
 export default function Booking() {
-  // idle | sending | sent | mailto | error
+  // idle | mailto
   const [status, setStatus] = useState('idle')
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault()
-    const form = e.currentTarget
-    const f = new FormData(form)
-
-    if (FORM_ID) {
-      // Honeypot: bots fill the hidden field, humans don't.
-      if (f.get('_honey')) return
-      setStatus('sending')
-      try {
-        const res = await fetch(ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            Name: f.get('name'),
-            Email: f.get('email'),
-            Instagram: f.get('ig') || '—',
-            Placement: f.get('placement'),
-            'Approx. size': f.get('size'),
-            'Preferred timing': f.get('timing') || '—',
-            'The idea': f.get('idea'),
-            _subject: `Tattoo enquiry — ${f.get('name')}`,
-            _replyto: f.get('email'),
-            _template: 'table',
-          }),
-        })
-        const out = await res.json().catch(() => ({}))
-        if (!res.ok || String(out.success) !== 'true') throw new Error(out.message || String(res.status))
-        form.reset()
-        setStatus('sent')
-      } catch {
-        setStatus('error')
-      }
-      return
-    }
+    const f = new FormData(e.currentTarget)
+    if (f.get('_honey')) return
 
     const body = [
       `Name: ${f.get('name')}`,
@@ -106,8 +73,6 @@ export default function Booking() {
 
             <Reveal delay={0.15}>
               <form
-                method="POST"
-                action={`https://formsubmit.co/${artist.email}`}
                 onSubmit={onSubmit}
                 className="mt-12 space-y-8"
               >
@@ -172,8 +137,8 @@ export default function Booking() {
                 </label>
 
                 <div className="flex flex-wrap items-center gap-6 pt-2">
-                  <button type="submit" disabled={status === 'sending'} className="btn-solid disabled:opacity-60">
-                    {status === 'sending' ? 'Sending…' : 'Send enquiry'} <ArrowUpRight size={14} strokeWidth={1.5} />
+                  <button type="submit" className="btn-solid">
+                    Send enquiry <ArrowUpRight size={14} strokeWidth={1.5} />
                   </button>
                   <a href={`mailto:${artist.email}`} className="link-wipe text-[13px] text-bone-dim">
                     or email {artist.email}
@@ -181,20 +146,10 @@ export default function Booking() {
                 </div>
 
                 <div role="status" aria-live="polite">
-                  {status === 'sent' && (
-                    <p className="text-[13px] text-sand">
-                      Thank you — your enquiry is with Rico. Expect a reply by email within a few days.
-                    </p>
-                  )}
                   {status === 'mailto' && (
                     <p className="text-[13px] text-sand">
                       Your mail app should be opening with the message ready. If nothing happened,
                       email {artist.email} directly.
-                    </p>
-                  )}
-                  {status === 'error' && (
-                    <p className="text-[13px] text-sand">
-                      Something went wrong sending that. Please try again, or email {artist.email} directly.
                     </p>
                   )}
                 </div>
